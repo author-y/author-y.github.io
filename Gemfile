@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "github-pages", group: :jekyll_plugins
-gem "minima"
+gem "minima", "~> 2.5"
 gem "jekyll"
 gem "bundler"
 
