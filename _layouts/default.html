@@ -1,1 +1,21 @@
-<p>最終更新日: {% last_modified_at %}</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+</head>
+<body>
+  <header>
+    <h1>{{ site.title }}</h1>
+  </header>
+
+  <main>
+    {{ content }}  <!-- ここが重要！ -->
+  </main>
+
+  <footer>
+    <p>最終更新日: {{ site.time | date: "%Y-%m-%d" }}</p>
+  </footer>
+</body>
+</html>
