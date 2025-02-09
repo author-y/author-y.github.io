@@ -14,6 +14,8 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
+      - name: Set GitHub Metadata
+        run: echo "GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> $GITHUB_ENV
       - name: Install dependencies
         run: |
           gem install bundler
