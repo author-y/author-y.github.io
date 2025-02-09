@@ -1,6 +1,7 @@
 theme: minima
 title: author-y's HomePage
 description: 自作PDF，メモ置き場
+repository: author-y/author-y.github.io
 
 plugins:
   - jekyll-last-modified-at
