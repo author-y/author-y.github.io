@@ -1,0 +1,10 @@
+---
+---
+@import "minima";
+
+.site-footer {
+  max-width: 960px;  // お好みで調整
+  margin: 0 auto;    // 中央寄せ
+  padding-left: 10rem;
+  padding-right: 10rem;
+}

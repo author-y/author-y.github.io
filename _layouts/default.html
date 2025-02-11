@@ -1,22 +1,24 @@
+---
+layout: nil
+---
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-</head>
-<body>
-  <header>
-    <h1>{{ site.title }}</h1>
-  </header>
+<html lang="{{ page.lang | default: site.lang | default: 'ja' }}">
+  <head>
+    {% include head.html %}
+	<link rel="stylesheet" href="{{ '/_assets/main.css' | relative_url }}">
+  </head>
+  <body class="{{ page.classes }}">
+    {% include header.html %}
 
-  <main>
-    {{ content }}  <!-- ここが重要！ -->
-  </main>
+    <main class="page-content">
+      {{ content }}
+    </main>
 
-  <footer>
-    <p>最終更新日: {{ site.time | date: "%Y-%m-%d" }}</p>
-  </footer>
-</body>
+    <footer class="site-footer">
+      {% if page.last_modified_at %}
+        <p>最終更新日: {{ page.last_modified_at | date: "%Y-%m-%d" }}</p>
+      {% endif %}
+      {% include footer.html %}
+    </footer>
+  </body>
 </html>
